@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'TimmonsNY';
+    src: url("../fonts/TIMMONSNY2.0-Regular.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url("../fonts/Inter-Light.ttf") format('truetype');
+}
+
+:root {
+    --primary: #46EBE1;
+    --secondary: #F4D952;
+    --black: black;
+    --white: white;
+  }
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    color: var(--black);
+    font-family: Inter, sans-serif;
+}
+
+body {
+    background: var(--white);
+    margin: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+h1 {
+    font-family: TimmonsNY, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: min(20rem, 20vw);
+    line-height: 235px;
+    color: var(--primary);
+}
+
+h1 a {
+    font-family: TimmonsNY, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    font-size: 20rem;
+    line-height: 16rem;
+}
+
+h2 {
+    font-family: TimmonsNY, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.hero {
+    height: calc(100vh - 299px);
+    padding: 32px;
+    background: url(../images/hero-min.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 235px;
+    background: var(--white);
+}
+
+/* fixed content */
+
+.title {
+    z-index: 1;
+}
+
+.title h1 {
+    position: fixed;
+    left: 32px;
+    bottom: -9px;
+    /* mix-blend-mode: difference; */
+}
+
+.contact {
+    position: fixed;
+    left: 32px;
+    top: 32px;
+}
+
+/* section 1 */
+
+.section-1 {
+    height: calc(100vh - 299px);
+    padding: 32px;
+    background: url(../images/project_gastromatic-min.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.divider {
+    height: 1px;
+    width: calc(100% - 64px);
+    background-color: var(--black);
+}
+
+.preview-container {
+    display: flex;
+    flex: 1 0 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.preview-container a {
+    position: absolute;
+    right: 96px;
+}
+
+.preview-image {
+    width: 10%;
+    height: 10%;
+    margin: 16px;
+    transition: all 500ms ease;
+}
+
+.preview-image:hover {
+    width: 40%;
+    height: 40%;
+    transition: all 500ms ease;
+}
+
+
+/* section 2 */
+
+.section-2 {
+    height: calc(100vh - 64px);
+    padding: 32px;
+    background: url(../images/project_vault93-min.jpg) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.section-3 {
+    position: relative;
+    background: var(--white);
+    height: calc(100vh - 64px);
+    padding: 32px;
+}
+
+.section-3 h1 {
+    position: absolute;
+    bottom: 32px;
+}
+
+.menu {
+    display: flex;
+    z-index: 1;
+    position: fixed;
+    text-align: right;
+    right: 32px;
+    bottom: 168px;
+    font-size: 1rem;
+    list-style: none;
+    flex-direction: row;
+    gap: 32px;
+    /* transform: rotate(-90deg); */
+}
+
+.menu .active {
+    box-shadow: inset 1000px 0 0 0 var(--black);
+}
+
+a {
+    box-shadow: inset 0 0 0 0 #31302B;
+    -webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
+}
+
+a:hover {
+    color: var(--white);
+    box-shadow: inset 1000px 0 0 0 var(--black);
+}
+
+.anchor {
+    z-index: 1;
+    position: fixed;
+    left: 32px;
+    bottom: 267px;
+}
+
+.note {
+    z-index: 1;
+    position: fixed;
+    right: 32px;
+    bottom: 32px;
+}
+
+/* Menu */
+
+#menu {
+    position: relative;
+    background: var(--primary);
+    height: calc(100vh - 64px);
+    padding: 32px;
+}
+
+/* About */
+
+.about {
+    height: calc(100vh - 299px);
+    padding: 144px 32px 32px 32px;
+    background: var(--primary);
+}
+
+.about-title {
+    color: var(--primary);
+}
+
+/* Projects */
+
+.project-title {
+    color: var(--black);
+}
+
+.project-container {
+    width: 303px;
+    height: 130px;
+    background: var(--white);
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    padding: 32px;
+    justify-content: center;
+}
+
+.two {
+    bottom: 267px;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+table th {
+    text-align: right;
+    padding-right: 16px;
+}
+
+/* Imprint */
+
+.impressum {
+    height: calc(100vh - 299px);
+    padding: 144px 32px 32px 32px;
+    background: var(--secondary);
+}
+
+.impressum-title {
+    color: var(--secondary);
+}
+
+.page-container {
+    height: calc(100% - 100px);
+    gap: 16px;
+    display:flex;
+    flex-direction: column;
+    max-width: 600px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
