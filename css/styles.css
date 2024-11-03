@@ -169,7 +169,19 @@ h2 {
     flex-direction: row;
     gap: 32px;
     /* transform: rotate(-90deg); */
+    -webkit-transition: all ease 0.8s;
+	-moz-transition: all ease 0.8s;
+	transition: all ease 0.8s;
 }
+
+@media only screen and (max-width: 412px) {
+    .menu {
+        gap: 12px;
+        -webkit-transition: all ease 0.8s;
+        -moz-transition: all ease 0.8s;
+        transition: all ease 0.8s;
+    }
+  }
 
 .menu .active {
     box-shadow: inset 1000px 0 0 0 var(--black);
@@ -193,6 +205,12 @@ a:hover {
     left: 32px;
     bottom: 267px;
 }
+
+@media only screen and (max-width: 480px) {
+    .anchor {
+        display: none;
+    }
+  }
 
 .note {
     z-index: 1;
@@ -237,11 +255,20 @@ a:hover {
     bottom: 32px;
     padding: 32px;
     justify-content: center;
+    -webkit-transition: all ease 0.8s;
+    -moz-transition: all ease 0.8s;
+    transition: all ease 0.8s;
 }
 
 .two {
     bottom: 267px;
 }
+
+@media only screen and (max-width: 412px) {
+    .project-container {
+        width: 242px;
+    }
+  }
 
 table {
     width: 100%;
